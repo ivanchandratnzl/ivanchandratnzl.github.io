@@ -3,10 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Chandra | Personal Website</title>
+    <title>Ivan Chandra Tanzil | Professional Portfolio</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        .nav-links a {
+            color: #475569;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.25rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p.bio {
+            font-size: 1.05rem;
+            color: #475569;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: #0077b5; /* LinkedIn Blue */
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #005885;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 3rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1e3a8a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Experience Cards */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: #0f172a;
+        }
+
+        .card .company {
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 0.25rem;
+        }
+
+        .card .date {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
+            padding-left: 1.2rem;
+            color: #334155;
+            font-size: 0.95rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Skills Tags */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #bfdbfe;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 5%;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif; text-align: center; padding: 50px;">
-    <h1>Halo, aku Ivan Chandra!</h1>
-    <p>Selamat datang di website pribadiku.</p>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo">Ivan Chandra Tanzil</div>
+        <div class="nav-links">
+            <a href="#about">Tentang</a>
+            <a href="#experience">Pengalaman</a>
+            <a href="#skills">Keahlian</a>
+            <a href="#contact">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <h1>Ivan Chandra Tanzil, S.B.</h1>
+        <p class="subtitle">Finance & Operations Professional</p>
+        <p class="bio">
+            Lulusan Manajemen Keuangan & Investasi Universitas Surabaya dengan pengalaman profesional di bidang financial operations, Accounts Payable, serta manajemen transaksi korporasi. Memiliki keahlian kuat dalam analisis keuangan, efisiensi pembayaran, dan kepatuhan pajak.
+        </p>
+        <div class="cta-buttons">
+            <a href="https://www.linkedin.com/in/ivanchandratnzl/" target="_blank" class="btn btn-primary">
+                <i class="fab fa-linkedin"></i> Buka LinkedIn Saya
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i> Hubungi Saya
+            </a>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <h2 class="section-title">Pengalaman Kerja</h2>
+
+        <div class="card">
+            <h3>Account Payable Staff / Finance Operations</h3>
+            <div class="company">BINUS Group & Corporate Partners</div>
+            <div class="date">Pengalaman Operasional & Finansial</div>
+            <ul>
+                <li>Mengelola proses verifikasi invoice, penjadwalan pembayaran, dan rekonsiliasi transaksi vendor secara akurat.</li>
+                <li>Meningkatkan efisiensi alur kerja Accounts Payable melalui integrasi otomatisasi sistem keuangan.</li>
+                <li>Memastikan kepatuhan laporan keuangan dan administrasi pajak korporasi berjalan sesuai regulasi.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Finance & Operations Specialist</h3>
+            <div class="company">PT Mentari Mas Multimoda / Industry Experience</div>
+            <div class="date">Pengalaman Bidang Keuangan</div>
+            <ul>
+                <li>Melakukan pengawasan serta pengontrolan arus kas harian dan pencatatan kas keluar/masuk.</li>
+                <li>Mengordinasikan evaluasi kelayakan aset serta pendanaan terstruktur untuk kebutuhan operasional.</li>
+                <li>Menyusun laporan keuangan periodik dan menganalisis performa anggaran perusahaan.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section">
+        <h2 class="section-title">Pendidikan</h2>
+        <div class="card">
+            <h3>Sarjana Bisnis (S.B.) - Finance & Investment</h3>
+            <div class="company">Universitas Surabaya (UBAYA)</div>
+            <div class="date">Lulus 2022</div>
+            <p style="color: #475569; font-size: 0.95rem;">
+                Spesialisasi Manajemen Keuangan, Investasi, dan Perantara Keuangan. Aktif dalam kegiatan asisten dosen dan organisasi kampus.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <h2 class="section-title">Keahlian Utama</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">Accounts Payable Management</span>
+            <span class="skill-tag">Financial Analysis & Reporting</span>
+            <span class="skill-tag">Corporate Payment Automation</span>
+            <span class="skill-tag">Tax Compliance & Reconciliation</span>
+            <span class="skill-tag">Microsoft Excel & Office Suite</span>
+            <span class="skill-tag">Mandarin (Conversational)</span>
+            <span class="skill-tag">English (CEFR B2)</span>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact">
+        <p style="margin-bottom: 0.5rem; font-weight: 600; color: #0f172a;">Terhubung dengan saya:</p>
+        <p>
+            <a href="https://www.linkedin.com/in/ivanchandratnzl/" target="_blank" style="color: #0077b5; text-decoration: none; font-weight: 500;">
+                <i class="fab fa-linkedin"></i> linkedin.com/in/ivanchandratnzl
+            </a>
+        </p>
+        <p style="margin-top: 1.5rem;">© 2026 Ivan Chandra Tanzil. Powered by GitHub Pages.</p>
+    </footer>
+
 </body>
 </html>
