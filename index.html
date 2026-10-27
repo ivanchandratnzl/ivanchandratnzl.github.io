@@ -37,3 +37,290 @@
         .logo {
             font-size: 1.25rem;
             font-weight: 700;
+            color: #1e3a8a;
+        }
+
+        .nav-links a {
+            color: #475569;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.25rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p.bio {
+            font-size: 1.05rem;
+            color: #475569;
+            max-width: 750px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: #0077b5; /* LinkedIn Blue */
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #005885;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 2.5rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1e3a8a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Experience Cards */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: #0f172a;
+        }
+
+        .card .company {
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 0.25rem;
+        }
+
+        .card .date {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 0.75rem;
+        }
+
+        .card ul {
+            padding-left: 1.2rem;
+            color: #334155;
+            font-size: 0.95rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Skills Tags */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #bfdbfe;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 5%;
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo">Ivan Chandra Tanzil</div>
+        <div class="nav-links">
+            <a href="#about">Tentang</a>
+            <a href="#experience">Pengalaman</a>
+            <a href="#education">Pendidikan</a>
+            <a href="#skills">Keahlian</a>
+            <a href="#contact">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <h1>Ivan Chandra Tanzil, S.M.</h1>
+        <p class="subtitle">Finance Professional & Secured Funding Specialist</p>
+        <p class="bio">
+            Professional di bidang finansial dengan pengalaman lebih dari 3 tahun dalam pengelolaan corporate finance, akuntansi, operasional keuangan, serta pelaporan dan rekonsiliasi. Berpengalaman di ekosistem BINUS School Simprug dan Temas Group, serta berpartner dengan PT Moladin Finance Indonesia sebagai Funding Agent untuk solusi pendanaan agunan properti.
+        </p>
+        <div class="cta-buttons">
+            <a href="https://www.linkedin.com/in/ictnzl" target="_blank" class="btn btn-primary">
+                <i class="fab fa-linkedin"></i> Profil LinkedIn
+            </a>
+            <a href="mailto:ivanchandratnzi@gmail.com" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i> Kirim Email
+            </a>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <h2 class="section-title">Pengalaman Kerja</h2>
+
+        <div class="card">
+            <h3>Finance Staff</h3>
+            <div class="company">BINUS School Simprug</div>
+            <div class="date">Januari 2025 – Sekarang | Jakarta Selatan, Indonesia</div>
+            <ul>
+                <li>Mengelola operasional dan administrasi harian keuangan institusi secara tepat dan teratur.</li>
+                <li>Melakukan verifikasi faktur/invoice, pengawasan arus kas, dan pelaporan keuangan periodik.</li>
+                <li>Melakukan rekonsiliasi transaksi serta mendukung kepatuhan operasional finansial secara efisien.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Funding Agent (Specialist Agunan Properti)</h3>
+            <div class="company">PT Moladin Finance Indonesia</div>
+            <div class="date">Desember 2025 – Sekarang | DKI Jakarta, Indonesia</div>
+            <ul>
+                <li>Membantu perorangan dan pemilik usaha mendapatkan fasilitas pencairan dana beragunan sertifikat (Rumah/Ruko/Tanah).</li>
+                <li>Melakukan analisis keuangan awal dan penilaian kelayakan kredit nasabah.</li>
+                <li>Mendampingi serta memberikan solusi pembiayaan bagi klien dengan beragam profil kredit (termasuk riwayat SLIK KOL 1 hingga KOL 5).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Accounts Payable Staff</h3>
+            <div class="company">PT Mentari Mas Multimoda (Temas Group)</div>
+            <div class="date">Juni 2022 – Januari 2025 | Surabaya, Jawa Timur, Indonesia</div>
+            <ul>
+                <li>Bertanggung jawab penuh atas pemrosesan faktur/invoice dan verifikasi dokumen tagihan vendor.</li>
+                <li>Mengatur jadwal pembayaran, melakukan rekonsiliasi akun kewajiban korporasi, serta pencatatan kas keluar secara akurat.</li>
+                <li>Bekerja sama dengan tim operasional dan perpajakan untuk kelancaran arus keuangan perusahaan.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <h2 class="section-title">Pendidikan & Sertifikasi</h2>
+
+        <div class="card">
+            <h3>Sarjana Manajemen (S.M.) – Manajemen Keuangan</h3>
+            <div class="company">Universitas Surabaya (UBAYA)</div>
+            <div class="date">Agustus 2018 – Februari 2022</div>
+            <p style="color: #475569; font-size: 0.95rem;">
+                Fokus studi pada manajemen keuangan korporasi, investasi, dan perantara keuangan.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sertifikasi Bahasa Mandarin</h3>
+            <div class="company">初级课程结业 (Elementary Course Completion)</div>
+            <p style="color: #475569; font-size: 0.95rem; margin-top: 0.25rem;">
+                Kemampuan komunikasi bahasa Mandarin tingkat dasar.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <h2 class="section-title">Keahlian & Bahasa</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">Workday</span>
+            <span class="skill-tag">Pemrosesan Faktur (Invoice Processing)</span>
+            <span class="skill-tag">Perencanaan Keuangan (Financial Planning)</span>
+            <span class="skill-tag">Accounts Payable Management</span>
+            <span class="skill-tag">Financial Reporting & Reconciliation</span>
+            <span class="skill-tag">Credit Assessment & SLIK Analysis</span>
+            <span class="skill-tag">Property-Backed Loan Financing</span>
+            <span class="skill-tag">Bahasa Indonesia (Native)</span>
+            <span class="skill-tag">Bahasa Inggris (Limited Working)</span>
+            <span class="skill-tag">Bahasa Mandarin (Elementary)</span>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact">
+        <p style="margin-bottom: 0.5rem; font-weight: 600; color: #0f172a;">Hubungi Saya:</p>
+        <p style="margin-bottom: 0.5rem;">
+            <i class="fas fa-envelope"></i> <a href="mailto:ivanchandratnzi@gmail.com" style="color: #2563eb; text-decoration: none;">ivanchandratnzi@gmail.com</a>
+        </p>
+        <p>
+            <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ictnzl" target="_blank" style="color: #0077b5; text-decoration: none; font-weight: 500;">linkedin.com/in/ictnzl</a>
+        </p>
+        <p style="margin-top: 1.5rem;">© 2026 Ivan Chandra Tanzil. Powered by GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
