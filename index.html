@@ -1,326 +1,375 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Chandra Tanzil | Professional Portfolio</title>
-    <!-- Google Fonts & Font Awesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101c2e">
+  <meta name="description" content="Ivan Chandra Tanzil — Finance professional with experience in financial operations, accounting, reconciliation, credit assessment, and property-backed funding solutions through Moladin.">
+  <meta property="og:title" content="Ivan Chandra Tanzil | Finance & Secured Funding">
+  <meta property="og:description" content="Finance operations, credit assessment, and property-backed funding solutions.">
+  <meta property="og:type" content="website">
+  <title>Ivan Chandra Tanzil | Finance &amp; Secured Funding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #101c2e;
+      --navy-2: #172942;
+      --ink: #172438;
+      --muted: #69778b;
+      --paper: #f4f6f9;
+      --white: #ffffff;
+      --line: #e2e8ef;
+      --teal: #54d6b2;
+      --teal-dark: #087f68;
+      --gold: #dfb86c;
+      --soft-teal: #e9f8f3;
+      --shadow: 0 18px 50px rgba(18, 35, 57, .08);
+      --radius: 22px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
+    .container { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,.93);
+      border-bottom: 1px solid rgba(226,232,239,.9);
+      backdrop-filter: blur(16px);
+    }
+    .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; min-width: max-content; }
+    .brand-mark {
+      width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center;
+      background: var(--navy); color: var(--teal); font: 800 14px 'Manrope', sans-serif; letter-spacing: -.06em;
+      box-shadow: 0 7px 18px rgba(16,28,46,.15);
+    }
+    .brand-name { display: block; font: 800 14px 'Manrope', sans-serif; letter-spacing: -.025em; }
+    .brand-role { display: block; color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { text-decoration: none; color: #5d6a7c; font-size: 13px; font-weight: 700; transition: color .2s ease; }
+    .nav-links a:hover { color: var(--teal-dark); }
+    .nav-links .nav-contact { padding: 10px 16px; background: var(--navy); color: white; border-radius: 999px; }
+    .nav-links .nav-contact:hover { background: var(--teal-dark); color: white; }
+    .mobile-menu { display: none; position: relative; }
+    .mobile-menu summary { list-style: none; cursor: pointer; border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; font-size: 13px; font-weight: 700; }
+    .mobile-menu summary::-webkit-details-marker { display: none; }
+    .mobile-menu[open] .mobile-menu-panel { position: absolute; right: 0; top: 48px; width: 190px; padding: 10px; background: white; border: 1px solid var(--line); border-radius: 15px; box-shadow: var(--shadow); display: grid; gap: 3px; }
+    .mobile-menu-panel a { text-decoration: none; padding: 9px 10px; border-radius: 9px; font-size: 13px; }
+    .mobile-menu-panel a:hover { background: var(--soft-teal); }
 
-        body {
-            background-color: #f8fafc;
-            color: #0f172a;
-            line-height: 1.6;
-        }
+    .hero { padding: 40px 0 0; }
+    .hero-panel {
+      position: relative; overflow: hidden; isolation: isolate;
+      display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(300px, .82fr); gap: 45px;
+      padding: clamp(34px, 5vw, 66px); border-radius: 30px;
+      background: radial-gradient(ellipse at 82% 15%, rgba(84,214,178,.14), transparent 30%), linear-gradient(132deg, var(--navy), #172b45 72%, #1a344b);
+      color: white; box-shadow: 0 24px 65px rgba(16,28,46,.16);
+    }
+    .hero-panel::before {
+      content: ''; position: absolute; inset: 0; z-index: -1; opacity: .18;
+      background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 46px 46px; mask-image: linear-gradient(100deg, black, transparent 90%);
+    }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 19px; color: var(--teal); font-size: 11px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+    .eyebrow::before { content: ''; width: 27px; height: 2px; background: var(--teal); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 650px; margin-bottom: 13px; font: 800 clamp(36px, 4.5vw, 59px)/1.08 'Manrope', sans-serif; letter-spacing: -.055em; }
+    .hero-title { max-width: 620px; margin-bottom: 21px; color: #d6e3ef; font: 600 clamp(16px, 2vw, 20px)/1.5 'Manrope', sans-serif; letter-spacing: -.02em; }
+    .hero-copy { max-width: 620px; color: #bdcad8; font-size: 15px; line-height: 1.85; margin-bottom: 28px; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 47px; padding: 12px 18px; border: 1px solid transparent; border-radius: 12px; text-decoration: none; font-size: 13px; font-weight: 800; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: var(--navy); background: var(--teal); }
+    .button-primary:hover { background: #8ee8d0; }
+    .button-ghost { color: white; border-color: rgba(255,255,255,.22); background: rgba(255,255,255,.04); }
+    .button-ghost:hover { border-color: rgba(255,255,255,.5); background: rgba(255,255,255,.09); }
+    .button svg { width: 16px; height: 16px; flex: 0 0 auto; }
+    .hero-side { align-self: center; }
+    .focus-card { position: relative; padding: 25px; border: 1px solid rgba(255,255,255,.16); border-radius: 22px; background: rgba(255,255,255,.075); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); backdrop-filter: blur(7px); }
+    .focus-top { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 23px; }
+    .focus-label { color: #c3d3e2; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .status-dot { display: inline-flex; align-items: center; gap: 7px; color: #b8f6e2; font-size: 11px; white-space: nowrap; }
+    .status-dot::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 4px rgba(84,214,178,.12); }
+    .focus-item { display: grid; grid-template-columns: 40px minmax(0,1fr); align-items: start; gap: 13px; padding: 15px 0; border-top: 1px solid rgba(255,255,255,.12); }
+    .focus-icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; color: var(--teal); background: rgba(84,214,178,.1); }
+    .focus-icon svg { width: 19px; height: 19px; }
+    .focus-item h3 { margin: 0 0 3px; color: white; font: 700 14px 'Manrope', sans-serif; }
+    .focus-item p { margin: 0; color: #b8c8d8; font-size: 12px; line-height: 1.6; }
+    .credentials-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; padding: 22px 0 12px; }
+    .credential { min-height: 84px; display: flex; align-items: center; gap: 14px; padding: 17px 20px; background: white; border: 1px solid var(--line); border-radius: 17px; box-shadow: 0 8px 20px rgba(18,35,57,.025); }
+    .credential-mark { width: 39px; height: 39px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 12px; color: var(--teal-dark); background: var(--soft-teal); }
+    .credential-mark svg { width: 19px; height: 19px; }
+    .credential strong { display: block; font: 800 13px 'Manrope', sans-serif; }
+    .credential span { display: block; color: var(--muted); font-size: 11px; line-height: 1.5; }
 
-        /* Header / Navbar */
-        nav {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    .section { padding: 80px 0 0; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 22px; margin-bottom: 25px; }
+    .section-kicker { margin-bottom: 8px; color: var(--teal-dark); font-size: 10px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+    .section-title { margin-bottom: 0; color: var(--navy); font: 800 clamp(27px, 3vw, 36px)/1.2 'Manrope', sans-serif; letter-spacing: -.045em; }
+    .section-intro { max-width: 410px; margin: 0; color: var(--muted); font-size: 13px; }
+    .experience-list { position: relative; display: grid; gap: 16px; }
+    .experience-card { display: grid; grid-template-columns: 175px minmax(0,1fr); gap: 26px; padding: 25px; background: white; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 8px 24px rgba(18,35,57,.025); transition: box-shadow .2s ease, transform .2s ease; }
+    .experience-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .experience-date { color: var(--muted); font-size: 11px; line-height: 1.7; }
+    .experience-date .date-pill { display: inline-block; margin-bottom: 9px; padding: 5px 9px; border-radius: 7px; color: var(--teal-dark); background: var(--soft-teal); font-weight: 800; }
+    .experience-main h3 { margin-bottom: 4px; font: 800 17px 'Manrope', sans-serif; letter-spacing: -.02em; }
+    .company { color: var(--teal-dark); font-weight: 700; font-size: 13px; margin-bottom: 13px; }
+    .experience-main ul { margin: 0; padding-left: 19px; color: #58677a; font-size: 13px; }
+    .experience-main li { padding-left: 3px; margin: 5px 0; }
+    .experience-main li::marker { color: #5ab99e; }
+    .current-label { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; padding: 4px 7px; border-radius: 6px; color: #087f68; background: #e9f8f3; vertical-align: middle; font: 800 9px 'DM Sans', sans-serif; letter-spacing: .07em; text-transform: uppercase; }
 
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #1e3a8a;
-        }
+    .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .content-card { background: white; border: 1px solid var(--line); border-radius: 20px; padding: 27px; box-shadow: 0 8px 24px rgba(18,35,57,.025); }
+    .content-card-header { display: flex; align-items: start; gap: 15px; margin-bottom: 21px; }
+    .large-icon { width: 47px; height: 47px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 14px; background: var(--navy); color: var(--teal); }
+    .large-icon svg { width: 22px; height: 22px; }
+    .content-card h3 { margin: 0 0 4px; font: 800 16px 'Manrope', sans-serif; }
+    .content-card .subline { margin: 0; color: var(--muted); font-size: 12px; }
+    .detail-row { padding: 13px 0; border-top: 1px solid #edf0f4; }
+    .detail-row strong { display: block; margin-bottom: 3px; font-size: 13px; }
+    .detail-row p { margin: 0; color: var(--muted); font-size: 12px; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; }
+    .tag { display: inline-flex; align-items: center; padding: 9px 12px; border: 1px solid #e0e8ed; border-radius: 10px; background: white; color: #405168; font-size: 12px; font-weight: 700; transition: border-color .2s ease, background .2s ease; }
+    .tag:hover { border-color: #a9dfd1; background: #f3fcf8; }
+    .skill-groups { display: grid; gap: 22px; }
+    .skill-group h3 { margin: 0 0 11px; color: #718096; font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
 
-        .nav-links a {
-            color: #475569;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+    .contact-panel { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 28px; margin-top: 80px; padding: clamp(28px, 4vw, 45px); border-radius: 25px; color: white; background: linear-gradient(120deg, #102039, #1b3651); }
+    .contact-panel .section-kicker { color: var(--teal); }
+    .contact-panel h2 { margin-bottom: 9px; font: 800 clamp(25px, 3vw, 35px)/1.2 'Manrope', sans-serif; letter-spacing: -.04em; }
+    .contact-panel p { max-width: 570px; margin-bottom: 0; color: #c0cedd; font-size: 13px; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .contact-actions .button { white-space: nowrap; }
+    footer { padding: 30px 0 36px; color: #8490a0; font-size: 11px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #e1e7ee; padding-top: 22px; }
+    .footer-inner p { margin: 0; }
+    .footer-links { display: flex; gap: 18px; }
+    .footer-links a { text-decoration: none; }
+    .footer-links a:hover { color: var(--teal-dark); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-        .nav-links a:hover {
-            color: #1e3a8a;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 4rem 5%;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero p.subtitle {
-            font-size: 1.25rem;
-            color: #2563eb;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero p.bio {
-            font-size: 1.05rem;
-            color: #475569;
-            max-width: 750px;
-            margin: 0 auto 2rem auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary {
-            background-color: #0077b5; /* LinkedIn Blue */
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background-color: #005885;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: #ffffff;
-            color: #0f172a;
-            border: 1px solid #cbd5e1;
-        }
-
-        .btn-secondary:hover {
-            background-color: #f1f5f9;
-        }
-
-        /* Content Sections */
-        .section {
-            padding: 2.5rem 5%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: #1e3a8a;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-        }
-
-        /* Experience Cards */
-        .card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.25rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            font-size: 1.15rem;
-            color: #0f172a;
-        }
-
-        .card .company {
-            font-weight: 600;
-            color: #2563eb;
-            margin-bottom: 0.25rem;
-        }
-
-        .card .date {
-            font-size: 0.85rem;
-            color: #64748b;
-            margin-bottom: 0.75rem;
-        }
-
-        .card ul {
-            padding-left: 1.2rem;
-            color: #334155;
-            font-size: 0.95rem;
-        }
-
-        .card ul li {
-            margin-bottom: 0.4rem;
-        }
-
-        /* Skills Tags */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .skill-tag {
-            background-color: #eff6ff;
-            color: #1d4ed8;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid #bfdbfe;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem 5%;
-            background-color: #ffffff;
-            border-top: 1px solid #e2e8f0;
-            color: #64748b;
-            font-size: 0.9rem;
-            margin-top: 2rem;
-        }
-    </style>
+    @media (max-width: 850px) {
+      .nav-links { gap: 17px; }
+      .nav-links a { font-size: 12px; }
+      .hero-panel { grid-template-columns: minmax(0,1fr) minmax(260px,.8fr); gap: 28px; padding: 35px; }
+      .credentials-strip { grid-template-columns: 1fr; }
+      .credential { min-height: unset; }
+      .section { padding-top: 65px; }
+      .contact-panel { margin-top: 65px; }
+    }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 30px, 560px); }
+      .nav-wrap { min-height: 68px; }
+      .nav-links { display: none; }
+      .mobile-menu { display: block; }
+      .hero { padding-top: 20px; }
+      .hero-panel { grid-template-columns: 1fr; gap: 30px; padding: 29px 23px; border-radius: 23px; }
+      h1 { font-size: clamp(36px, 11vw, 49px); }
+      .hero-title { font-size: 17px; }
+      .hero-copy { font-size: 13px; }
+      .focus-card { padding: 20px; }
+      .section-heading { display: block; }
+      .section-intro { margin-top: 12px; }
+      .experience-card { grid-template-columns: 1fr; gap: 10px; padding: 21px; }
+      .experience-date { margin-bottom: 1px; }
+      .experience-date .date-pill { margin-right: 6px; margin-bottom: 0; }
+      .two-column { grid-template-columns: 1fr; }
+      .content-card { padding: 23px; }
+      .contact-panel { grid-template-columns: 1fr; margin-top: 60px; }
+      .contact-actions { align-items: stretch; }
+      .contact-actions .button { flex: 1; }
+      .footer-inner { align-items: start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Ivan Chandra Tanzil — home">
+        <span class="brand-mark" aria-hidden="true">ICT</span>
+        <span><span class="brand-name">Ivan Chandra Tanzil</span><span class="brand-role">Finance &amp; Secured Funding</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">Overview</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#expertise">Expertise</a>
+        <a class="nav-contact" href="#contact">Get in touch ↗</a>
+      </nav>
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation menu">Menu +</summary>
+        <nav class="mobile-menu-panel" aria-label="Mobile navigation">
+          <a href="#about">Overview</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#expertise">Expertise</a><a href="#contact">Get in touch</a>
+        </nav>
+      </details>
+    </div>
+  </header>
 
-    <!-- Header Navigation -->
-    <nav>
-        <div class="logo">Ivan Chandra Tanzil</div>
-        <div class="nav-links">
-            <a href="#about">Tentang</a>
-            <a href="#experience">Pengalaman</a>
-            <a href="#education">Pendidikan</a>
-            <a href="#skills">Keahlian</a>
-            <a href="#contact">Kontak</a>
+  <main id="top">
+    <section class="hero" id="about" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-panel">
+          <div class="hero-main">
+            <p class="eyebrow">Finance · Credit · Funding</p>
+            <h1 id="hero-heading">Ivan Chandra Tanzil<span style="color:var(--teal)">.</span></h1>
+            <p class="hero-title">Finance Professional &amp; Secured Funding Specialist</p>
+            <p class="hero-copy">Finance professional with 3+ years of experience across corporate finance, accounting, and financial operations. Currently supporting finance operations at BINUS School Simprug while helping individuals and business owners explore property-backed financing solutions through Moladin.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://www.linkedin.com/in/ictnzl/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.3ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V8.99h3.56v11.46ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+                View LinkedIn
+              </a>
+              <a class="button button-ghost" href="mailto:ivanchandratnzi@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                Contact by email
+              </a>
+            </div>
+          </div>
+          <aside class="hero-side" aria-label="Core areas of focus">
+            <div class="focus-card">
+              <div class="focus-top"><span class="focus-label">Core focus</span><span class="status-dot">Professional profile</span></div>
+              <div class="focus-item">
+                <span class="focus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h4m-4 4h7"/></svg></span>
+                <div><h3>Financial Operations</h3><p>Accounting support, financial reporting, invoice processing, and reconciliation.</p></div>
+              </div>
+              <div class="focus-item">
+                <span class="focus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20 7v5c0 4.5-3.1 7.5-8 9-4.9-1.5-8-4.5-8-9V7l8-4Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span>
+                <div><h3>Credit Assessment</h3><p>Initial financial review and consideration of borrower credit profiles, including SLIK records.</p></div>
+              </div>
+              <div class="focus-item">
+                <span class="focus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7"/><path d="M5 9v11h14V9M9 20v-7h6v7"/></svg></span>
+                <div><h3>Property-Backed Funding</h3><p>Supporting financing enquiries secured by property certificates such as houses, shop-houses, and land.</p></div>
+              </div>
+            </div>
+          </aside>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="about">
-        <h1>Ivan Chandra Tanzil, S.M.</h1>
-        <p class="subtitle">Finance Professional & Secured Funding Specialist</p>
-        <p class="bio">
-            Professional di bidang finansial dengan pengalaman lebih dari 3 tahun dalam pengelolaan corporate finance, akuntansi, operasional keuangan, serta pelaporan dan rekonsiliasi. Berpengalaman di ekosistem BINUS School Simprug dan Temas Group, serta berpartner dengan PT Moladin Finance Indonesia sebagai Funding Agent untuk solusi pendanaan agunan properti.
-        </p>
-        <div class="cta-buttons">
-            <a href="https://www.linkedin.com/in/ictnzl" target="_blank" class="btn btn-primary">
-                <i class="fab fa-linkedin"></i> Profil LinkedIn
-            </a>
-            <a href="mailto:ivanchandratnzi@gmail.com" class="btn btn-secondary">
-                <i class="fas fa-envelope"></i> Kirim Email
-            </a>
+        <div class="credentials-strip" aria-label="Professional summary">
+          <div class="credential"><span class="credential-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5m0 14h17M8 15l4-4 3 2 5-6"/></svg></span><div><strong>3+ Years</strong><span>Finance &amp; accounting experience</span></div></div>
+          <div class="credential"><span class="credential-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6M8 10h.01M16 10h.01"/></svg></span><div><strong>Corporate Finance</strong><span>Current role at BINUS School Simprug</span></div></div>
+          <div class="credential"><span class="credential-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div><strong>Finance + Funding</strong><span>Corporate operations and secured financing</span></div></div>
         </div>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <h2 class="section-title">Pengalaman Kerja</h2>
-
-        <div class="card">
-            <h3>Finance Staff</h3>
-            <div class="company">BINUS School Simprug</div>
-            <div class="date">Januari 2025 – Sekarang | Jakarta Selatan, Indonesia</div>
-            <ul>
-                <li>Mengelola operasional dan administrasi harian keuangan institusi secara tepat dan teratur.</li>
-                <li>Melakukan verifikasi faktur/invoice, pengawasan arus kas, dan pelaporan keuangan periodik.</li>
-                <li>Melakukan rekonsiliasi transaksi serta mendukung kepatuhan operasional finansial secara efisien.</li>
-            </ul>
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-kicker">Career history</p><h2 class="section-title" id="experience-heading">Professional Experience</h2></div>
+          <p class="section-intro">Experience across finance operations and accounts payable, alongside a focus on property-backed funding solutions.</p>
         </div>
-
-        <div class="card">
-            <h3>Funding Agent (Specialist Agunan Properti)</h3>
-            <div class="company">PT Moladin Finance Indonesia</div>
-            <div class="date">Desember 2025 – Sekarang | DKI Jakarta, Indonesia</div>
-            <ul>
-                <li>Membantu perorangan dan pemilik usaha mendapatkan fasilitas pencairan dana beragunan sertifikat (Rumah/Ruko/Tanah).</li>
-                <li>Melakukan analisis keuangan awal dan penilaian kelayakan kredit nasabah.</li>
-                <li>Mendampingi serta memberikan solusi pembiayaan bagi klien dengan beragam profil kredit (termasuk riwayat SLIK KOL 1 hingga KOL 5).</li>
-            </ul>
+        <div class="experience-list">
+          <article class="experience-card">
+            <div class="experience-date"><span class="date-pill">Jan 2025 — Present</span><br>South Jakarta, Indonesia</div>
+            <div class="experience-main">
+              <h3>Finance Staff <span class="current-label">Current role</span></h3>
+              <p class="company">BINUS School Simprug</p>
+              <ul>
+                <li>Support daily finance operations and financial administration within the school.</li>
+                <li>Review invoices and payment documentation, and support periodic financial reporting.</li>
+                <li>Perform transaction reconciliation and help maintain accurate, well-organized finance records.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-date"><span class="date-pill">Dec 2025 — Present</span><br>Jakarta, Indonesia</div>
+            <div class="experience-main">
+              <h3>Funding Agent</h3>
+              <p class="company">Moladin · PT Moladin Finance Indonesia</p>
+              <ul>
+                <li>Help individuals and business owners explore financing secured by property certificates, including houses, shop-houses, and land.</li>
+                <li>Support initial financial and credit-profile reviews, including SLIK records ranging from KOL 1 to KOL 5.</li>
+                <li>Guide prospective clients through initial questions about property-backed financing and the application process.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-date"><span class="date-pill">Jun 2022 — Jan 2025</span><br>Surabaya, Indonesia</div>
+            <div class="experience-main">
+              <h3>Accounts Payable Staff</h3>
+              <p class="company">PT Mentari Mas Multimoda · Temas Group</p>
+              <ul>
+                <li>Processed supplier invoices and checked supporting documents for vendor payments.</li>
+                <li>Supported payment scheduling, accounts payable reconciliation, and accurate recording of outgoing cash.</li>
+                <li>Coordinated with operational and tax teams to support smooth payment administration.</li>
+              </ul>
+            </div>
+          </article>
         </div>
-
-        <div class="card">
-            <h3>Accounts Payable Staff</h3>
-            <div class="company">PT Mentari Mas Multimoda (Temas Group)</div>
-            <div class="date">Juni 2022 – Januari 2025 | Surabaya, Jawa Timur, Indonesia</div>
-            <ul>
-                <li>Bertanggung jawab penuh atas pemrosesan faktur/invoice dan verifikasi dokumen tagihan vendor.</li>
-                <li>Mengatur jadwal pembayaran, melakukan rekonsiliasi akun kewajiban korporasi, serta pencatatan kas keluar secara akurat.</li>
-                <li>Bekerja sama dengan tim operasional dan perpajakan untuk kelancaran arus keuangan perusahaan.</li>
-            </ul>
-        </div>
+      </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="section" id="education">
-        <h2 class="section-title">Pendidikan & Sertifikasi</h2>
-
-        <div class="card">
-            <h3>Sarjana Manajemen (S.M.) – Manajemen Keuangan</h3>
-            <div class="company">Universitas Surabaya (UBAYA)</div>
-            <div class="date">Agustus 2018 – Februari 2022</div>
-            <p style="color: #475569; font-size: 0.95rem;">
-                Fokus studi pada manajemen keuangan korporasi, investasi, dan perantara keuangan.
-            </p>
+    <section class="section" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-kicker">Academic background</p><h2 class="section-title" id="education-heading">Education &amp; Certification</h2></div>
         </div>
-
-        <div class="card">
-            <h3>Sertifikasi Bahasa Mandarin</h3>
-            <div class="company">初级课程结业 (Elementary Course Completion)</div>
-            <p style="color: #475569; font-size: 0.95rem; margin-top: 0.25rem;">
-                Kemampuan komunikasi bahasa Mandarin tingkat dasar.
-            </p>
+        <div class="two-column">
+          <article class="content-card">
+            <div class="content-card-header">
+              <span class="large-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c3.5 3 8.5 3 12 0v-5M22 9v6"/></svg></span>
+              <div><h3>Bachelor of Management</h3><p class="subline">Financial Management</p></div>
+            </div>
+            <div class="detail-row"><strong>Universitas Surabaya (UBAYA)</strong><p>2018 — 2022</p></div>
+            <div class="detail-row"><strong>Academic focus</strong><p>Management and financial management.</p></div>
+          </article>
+          <article class="content-card">
+            <div class="content-card-header">
+              <span class="large-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21V5.5Z"/><path d="M4 6h13M8 10h7M8 14h5"/></svg></span>
+              <div><h3>Chinese Language Certificate</h3><p class="subline">初级课程结业 · Elementary Course Completion</p></div>
+            </div>
+            <div class="detail-row"><strong>泗水中中华语学习中心</strong><p>Issued November 2024 · Expires December 2034</p></div>
+            <div class="detail-row"><strong>Related coursework</strong><p>HSK 3 course</p></div>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-        <h2 class="section-title">Keahlian & Bahasa</h2>
-        <div class="skills-grid">
-            <span class="skill-tag">Workday</span>
-            <span class="skill-tag">Pemrosesan Faktur (Invoice Processing)</span>
-            <span class="skill-tag">Perencanaan Keuangan (Financial Planning)</span>
-            <span class="skill-tag">Accounts Payable Management</span>
-            <span class="skill-tag">Financial Reporting & Reconciliation</span>
-            <span class="skill-tag">Credit Assessment & SLIK Analysis</span>
-            <span class="skill-tag">Property-Backed Loan Financing</span>
-            <span class="skill-tag">Bahasa Indonesia (Native)</span>
-            <span class="skill-tag">Bahasa Inggris (Limited Working)</span>
-            <span class="skill-tag">Bahasa Mandarin (Elementary)</span>
+    <section class="section" id="expertise" aria-labelledby="expertise-heading">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-kicker">Capabilities</p><h2 class="section-title" id="expertise-heading">Core Expertise</h2></div>
+          <p class="section-intro">A practical combination of finance administration, accounting support, and secured funding knowledge.</p>
         </div>
+        <div class="content-card">
+          <div class="skill-groups">
+            <div class="skill-group"><h3>Finance &amp; accounting</h3><div class="tag-list"><span class="tag">Financial Operations</span><span class="tag">Accounts Payable</span><span class="tag">Invoice Processing</span><span class="tag">Financial Reporting</span><span class="tag">Account Reconciliation</span><span class="tag">Workday</span></div></div>
+            <div class="skill-group"><h3>Credit &amp; secured funding</h3><div class="tag-list"><span class="tag">Credit Assessment</span><span class="tag">SLIK Profile Review</span><span class="tag">Property-Backed Financing</span><span class="tag">Client Support</span></div></div>
+            <div class="skill-group"><h3>Languages</h3><div class="tag-list"><span class="tag">Indonesian · Native</span><span class="tag">English · Limited Working</span><span class="tag">Mandarin · Elementary</span></div></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact & Footer -->
-    <footer id="contact">
-        <p style="margin-bottom: 0.5rem; font-weight: 600; color: #0f172a;">Hubungi Saya:</p>
-        <p style="margin-bottom: 0.5rem;">
-            <i class="fas fa-envelope"></i> <a href="mailto:ivanchandratnzi@gmail.com" style="color: #2563eb; text-decoration: none;">ivanchandratnzi@gmail.com</a>
-        </p>
-        <p>
-            <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ictnzl" target="_blank" style="color: #0077b5; text-decoration: none; font-weight: 500;">linkedin.com/in/ictnzl</a>
-        </p>
-        <p style="margin-top: 1.5rem;">© 2026 Ivan Chandra Tanzil. Powered by GitHub Pages.</p>
-    </footer>
+    <section class="container contact-panel" id="contact" aria-labelledby="contact-heading">
+      <div><p class="section-kicker">Let's connect</p><h2 id="contact-heading">Discuss finance or funding needs.</h2><p>For professional connections, finance-related opportunities, or an initial discussion about property-backed financing, feel free to reach out.</p></div>
+      <div class="contact-actions">
+        <a class="button button-primary" href="mailto:ivanchandratnzi@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Email me</a>
+        <a class="button button-ghost" href="https://www.linkedin.com/in/ictnzl/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Ivan Chandra Tanzil. Built with GitHub Pages.</p>
+      <div class="footer-links"><a href="mailto:ivanchandratnzi@gmail.com">Email</a><a href="https://www.linkedin.com/in/ictnzl/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
 </body>
 </html>
